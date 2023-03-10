@@ -11,7 +11,7 @@ VALUES ("IT"),
        ("Human Resources"),
        ("Management")
 
-INSERT INTO Manager ()
+--INSERT INTO Manager ()
 
 INSERT INTO Employee (first_name, last_name, Role, Department, salary, manager)
 VALUES ("Hepworth","Kimberly", 1, 1, )
