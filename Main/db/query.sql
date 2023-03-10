@@ -4,6 +4,6 @@ employee.department AS department, employee.salary AS salary,
 employee.manager AS manager
 FROM Employee
 LEFT JOIN Role
-ON employee.role_id = role.title;
+ON employee.role_id = position.title;
 
 
