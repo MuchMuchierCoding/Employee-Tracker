@@ -21,5 +21,4 @@ CREATE TABLE employee (
   last_name  VARCHAR(30) NOT NULL,
   position_id INT,
   manager_id INT
- 
 );
