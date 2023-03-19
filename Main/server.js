@@ -15,10 +15,10 @@ const db = mysql.createConnection(
   {
     host: 'localhost',
     // MySQL username,
-    user: 'root',
+    DB_USER: 'root',
     // TODO: Add MySQL password here
-    password: 'process.env.MYSQL_PASSWORD',
-    database: 'employees_db'
+    DB_PASSWORD: '',
+    DB_NAME: 'employees_db'
   },
   console.log(`Connected to the employees_db database.`)
 ); 
@@ -37,7 +37,7 @@ const init = () => {
         viewAllDepartments();
         break;
       case "View all Positions": 
-        viewAllRoles();
+        viewAllPositions();
         break;
       case "View all Employees":
         viewAllEmployees();
@@ -59,7 +59,7 @@ const init = () => {
 };
 
 //---View all Departments---
-const ViewAllDepartments = () => {
+const viewAllDepartments = () => {
   const sql = `Select * FROM Department`;
   db.query(sql, (err, res) => {
     if (err) throw err;
@@ -69,7 +69,7 @@ const ViewAllDepartments = () => {
 }
 
 //---View all Position---
-const viewPositions = () => {
+const viewAllPositions = () => {
   const sql = `SELECT position.id, position.title, department.name, position.salary FROM position JOIN department ON position.department_id = department.id`;
   db.query(sql, (err, res) => {
     if (err) throw err;
@@ -79,7 +79,7 @@ const viewPositions = () => {
 }
 
 //---View all Employees---
-const viewEmployees = () => {
+const viewAllEmployees = () => {
   const sql = `SELECT A.id, A.first_name, A.last_name, position.title, department.name AS department, position.salary, concat (B.first_name, '', B.last_name) AS manager FROM employee A JOIN position ON A.position_id = position.id JOIN department ON position.department_id = department.id LEFT JOIN employee B on A.manager_id = B.id;`;
   db.query(sql, (err, res) => {
     if (err) throw err; 
@@ -89,7 +89,7 @@ const viewEmployees = () => {
 }
 
 //---Add a Department---
-const addDept = () => {
+const addDepartment = () => {
   inquirer .prompt([
     {
       type: 'input',
