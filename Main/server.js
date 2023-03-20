@@ -10,18 +10,6 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// Connect to database
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    // MySQL username,
-    DB_USER: 'root',
-    // TODO: Add MySQL password here
-    DB_PASSWORD: '',
-    DB_NAME: 'employees_db'
-  },
-  console.log(`Connected to the employees_db database.`)
-); 
 
 const init = () => {
   inquirer.prompt([{
