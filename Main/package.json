@@ -11,9 +11,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.17.1",
-    "jshint": "^2.12.0",
-    "mysql2": "^2.2.5",
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.2.5"
   }
 }

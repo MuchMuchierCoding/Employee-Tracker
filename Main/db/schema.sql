@@ -11,9 +11,9 @@ CREATE TABLE department (
 CREATE TABLE position (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
-    salary DECIMAL, 
-    department_id INT,
-  
+    salary INT, 
+    department_id INT
+
 );
 
 CREATE TABLE employee (

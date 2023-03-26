@@ -4,16 +4,16 @@ VALUES ("IT"),
        ("Human Resources"),
        ("Adminstration");
 
-INSERT INTO position (title,department_id,salary)
-VALUES ("Intern", 1, 30000),
-       ("Customer Service Rep", 2, 35000),
-       ("Tech Support", 1, 40000),
-       ("Account Manager", 4, 55000),
-       ("HR Rep", 3, 45000),
-       ("Systems Adminstrator", 1, 80000),
-       ("Human Resources Manager", 3, 75000),
-       ("Retention Manager", 4, 85000),
-       ("Shift Lead", 4, 30000);
+INSERT INTO position (title,salary,department_id)
+VALUES ("Intern", 30000, 1),
+       ("Customer Service Rep", 35000, 2),
+       ("Tech Support", 40000, 1),
+       ("Account Manager", 55000, 4),
+       ("HR Rep", 45000, 3),
+       ("Systems Adminstrator", 80000, 1),
+       ("Human Resources Manager", 75000, 3),
+       ("Retention Manager", 85000, 4),
+       ("Shift Lead", 30000, 4);
 
 
 
